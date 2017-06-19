@@ -1,0 +1,12 @@
+<form class="c-form" #addForm="ngForm" (ngSubmit)="addForm(model)" novalidate="true">
+  <label for="name" class="sr-only">Name</label>
+  <input id="name" type="text" name="name" 
+    [(ngModel)]="model.name"
+    #name="ngModel" required />
+
+  <label for="description" class="sr-only">Description</label>
+  <textarea id="description" name="description" rows="4" [(ngModel)]="model.description"
+    #description="ngModel" required></textarea>
+
+  <button class="btn" type="submit" [disabled]="!addForm.form.valid">Add</button>
+</form>

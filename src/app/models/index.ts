@@ -1,0 +1,1 @@
+export {Inote} from './note.model';

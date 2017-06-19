@@ -1,0 +1,12 @@
+<div class="c-alert" *ngIf="!notes.length">You have no items</div>
+
+<div class="c-note" *ngFor="let note of notes; let i = index">
+  <div class="content">
+    <h2 class="name">{{ note.name }}</h2>
+    <div class="date">{{ note.date | date: 'yyyy' }}</div>
+  </div>
+  <div class="actions">
+    <button class="btn btn-edit" (click)="editNote(i)">Edit</button>
+    <button class="btn btn-delete" (click)="deleteNote(i)">Delete</button>
+  </div>
+</div>

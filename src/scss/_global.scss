@@ -1,0 +1,139 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $font-main;
+}
+body {
+  color: $text-color;
+  background-color: $brand-grey-light;
+}
+
+h1, h2, h3 {
+  font-weight: $font-medium;
+}
+
+h2 {
+  @include font-size(1.4);
+}
+
+p {
+  margin-top: 0;
+}
+
+form {
+  label {
+    position: relative;
+  }
+
+  input, textarea, select {
+    margin-bottom: $spc;
+    color: $brand-black;   
+  }
+}
+
+input, select, textarea, button {
+  font-family: $font-main;
+  font-weight: $font-normal;
+}
+
+input, textarea { 
+  padding: $spc-half $spc;
+  min-height: 34px;
+  width: 100%;
+  border: $border-primary;
+
+  &:focus {
+    border-color: $brand-black;
+  }
+}
+
+textarea {
+  padding-top: $spc;
+  padding-bottom: $spc;
+}
+
+input, textarea, button, a {
+  &:focus {
+    outline: 1px dotted $brand-black;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: $font-bold;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  height: 26px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $radius-default;
+  color: $brand-white;
+  border: none;
+  background-color: $brand-blue;
+  transition: 0.25s;
+
+  &:hover, &:focus {
+    background-color: darken($brand-blue, 25%);
+  }
+
+  &.btn-secondary {}
+}
+
+code, pre {
+  padding: 4px;
+  font-family: $font-code;
+}
+
+pre {
+  color: $brand-grey-dark;
+  background-color: $brand-white;
+  border: $border-primary;
+}
+
+svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.c-alert {
+  padding: $spc;
+  margin-bottom: $spc;
+  text-align: center;
+  font-weight: $font-medium;
+  color: $alert;
+  border: 1px solid lighten($alert, 20%);
+
+  &.error {
+    color: $alert-error;
+    border-color: lighten($alert-error, 20%);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  // padding: $spc;
+  max-width: 100%;
+}

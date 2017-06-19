@@ -1,0 +1,13 @@
+@import '../_variables';
+
+header {
+  text-align: center;
+  background-color: $brand-white;
+  border-bottom: $border-primary;
+  @extend %clearfix;
+
+  .logo {
+    display: inline-block;
+    margin: $spc-half 0;
+  }
+}

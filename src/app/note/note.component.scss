@@ -1,0 +1,38 @@
+@import '../_variables';
+
+.c-note {
+  display: table;
+  width: 100%;
+  padding: $spc-double;
+  border-bottom: $border-primary;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: lighten($brand-blue, 35%);
+  }
+
+  .content, .actions {
+    width: 100%;
+
+    @media screen and (min-width: $mobile-min) {
+      display: table-cell;
+      vertical-align: top;
+      width: 50%;
+    }
+  }
+  .name {
+    margin-top: 0;
+  }
+  .actions {
+    padding-top: $spc;
+
+    @media screen and (min-width: $mobile-min) {
+      padding-top: 0;
+      text-align: right;
+    }
+  }
+
+  .btn {
+    width: auto;
+  }
+}
