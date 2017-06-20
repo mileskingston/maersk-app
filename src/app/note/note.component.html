@@ -1,6 +1,6 @@
 <div class="c-alert" *ngIf="!notes.length">You have no items</div>
 
-<div class="c-filters">
+<div class="c-filters" *ngIf="notes.length > 1">
   <button class="btn btn-secondary" (click)="sort('name')">Sort by Name</button>
   <button class="btn btn-secondary" (click)="sort('date')">Sort by Date</button>
 </div>
