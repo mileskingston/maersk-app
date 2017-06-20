@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SortPipe } from '../sort.pipe';
 import { NotesService } from '../notes.service';
 import { Inote } from '../models/index';
 
@@ -10,6 +11,7 @@ import { Inote } from '../models/index';
 })
 export class NoteComponent implements OnInit {
 
+  option: string;
   notes: Inote[];
 
   constructor(private notesService: NotesService) { }
@@ -24,5 +26,9 @@ export class NoteComponent implements OnInit {
 
   editNote() {
     
+  }
+
+  sort(type) {
+    this.option = type;
   }
 }

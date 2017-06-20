@@ -1,4 +1,6 @@
-<form class="c-form" #addForm="ngForm" (ngSubmit)="addForm(model)" novalidate="true">
+<div class="c-alert" *ngIf="addForm.invalid && submitted">All fields are required</div>
+
+<form class="c-form" #addForm="ngForm" (ngSubmit)="addNote(model)" novalidate="true">
   <label for="name" class="sr-only">Name</label>
   <input id="name" type="text" name="name" 
     [(ngModel)]="model.name"
@@ -8,5 +10,5 @@
   <textarea id="description" name="description" rows="4" [(ngModel)]="model.description"
     #description="ngModel" required></textarea>
 
-  <button class="btn" type="submit" [disabled]="!addForm.form.valid">Add</button>
+  <button class="btn" type="submit" [disabled]="!addForm.valid">Add</button>
 </form>

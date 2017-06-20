@@ -1,9 +1,14 @@
 <div class="c-alert" *ngIf="!notes.length">You have no items</div>
 
-<div class="c-note" *ngFor="let note of notes; let i = index">
+<div class="c-filters">
+  <button class="btn btn-secondary" (click)="sort('name')">Sort Name</button>
+  <button class="btn btn-secondary" (click)="sort('date')">Sort Date</button>
+</div>
+
+<div class="c-note" *ngFor="let note of notes | sort: {option: option}; let i = index">
   <div class="content">
     <h2 class="name">{{ note.name }}</h2>
-    <div class="date">{{ note.date | date: 'yyyy' }}</div>
+    <div class="date"><span class="label">Updated: </span>{{ note.date | date: 'yMdjm' }}</div>
   </div>
   <div class="actions">
     <button class="btn btn-edit" (click)="editNote(i)">Edit</button>

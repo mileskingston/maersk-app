@@ -9,6 +9,7 @@ import { NoteListComponent } from './note-list/note-list.component';
 import { NoteComponent } from './note/note.component';
 import { NotesService } from './notes.service';
 import { AddFormComponent } from './add-form/add-form.component';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddFormComponent } from './add-form/add-form.component';
     HeaderComponent,
     NoteListComponent,
     NoteComponent,
-    AddFormComponent
+    AddFormComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

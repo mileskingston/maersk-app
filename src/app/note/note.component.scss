@@ -1,11 +1,23 @@
 @import '../_variables';
 
+.c-filters {
+  padding: $spc 0;
+
+  .btn {
+    width: auto;
+  }
+}
+
 .c-note {
   display: table;
   width: 100%;
   padding: $spc-double;
   border-bottom: $border-primary;
   transition: background-color 200ms;
+
+  &:first-child {
+    border-top: $border-primary; 
+  }
 
   &:hover {
     background-color: lighten($brand-blue, 35%);

@@ -9,14 +9,24 @@ export class NotesService {
 
    data = [
     {
-      "name": "Note one",
+      "name": "ZZZ one",
       "description": "This is my note one",
-      "date": 270291987
+      "date": new Date(2013, 11, 17, 3, 24, 0)
     },
     {
-      "name": "Note two",
+      "name": "XXX one",
+      "description": "This is my note one",
+      "date": new Date(1995, 11, 17, 3, 24, 0)
+    },
+    {
+      "name": "AAA two",
       "description": "This is my note two",
-      "date": 27041999
+      "date": new Date(2005, 11, 17, 3, 24, 0)
+    },
+    {
+      "name": "BBB three",
+      "description": "This is my note three",
+      "date": new Date(1988, 11, 17, 3, 24, 0)
     }
   ]
 
@@ -29,9 +39,9 @@ export class NotesService {
     return this.data;
   }
 
-  addNote() {
-  //   this.data.push(note);
-  //   return this.data;
+  addNote(data) {
+    this.data.push(data);
+    return this.data;
   }
 
   editNote() {
