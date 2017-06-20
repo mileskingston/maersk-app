@@ -1,4 +1,5 @@
-<div class="c-alert" *ngIf="addForm.invalid && submitted">All fields are required</div>
+<div class="c-alert" 
+  *ngIf="name.invalid && description.invalid && submitted">All fields are required</div>
 
 <form class="c-form" #addForm="ngForm" (ngSubmit)="addNote(model)" novalidate="true">
   <label for="name" class="sr-only">Name</label>

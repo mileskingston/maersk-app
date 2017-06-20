@@ -1,0 +1,20 @@
+<div *ngIf="note">
+  <h2>{{note.name}}</h2>
+  
+  <form #editForm="ngForm" (ngSubmit)="saveNote(note)">
+    <label for="name" class="sr-only">Name</label>
+    <input id="name" type="text" name="name" 
+      [(ngModel)]="note.name"
+      #name="ngModel" required />
+
+    <label for="description" class="sr-only">Description</label>
+    <textarea id="description" name="description" rows="4" [(ngModel)]="note.description"
+      #description="ngModel" required></textarea>
+
+    <button class="btn" type="submit" [disabled]="!editForm.valid">Add</button>
+  </form>
+  
+  <div class="actions">
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+  </div>
+</div>

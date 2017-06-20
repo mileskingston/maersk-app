@@ -10,15 +10,15 @@ import { NotesService } from '../notes.service';
 })
 export class AddFormComponent {
 
-  model = new Inote('', '', new Date());
+  model = new Inote(1,'', '', new Date());
   submitted = false;
 
   constructor(private notesService: NotesService) { }
 
   addNote(data) {
-     this.model = new Inote(data.name, data.description, data.date);
+     this.model = new Inote(data.length + 1, data.name, data.description, data.date);
      this.notesService.addNote(this.model);
      this.submitted = true;
-     this.model = new Inote('', '', new Date());
+     this.model = new Inote(data.length + 1, '', '', new Date());
   }
 }
